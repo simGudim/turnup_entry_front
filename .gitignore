@@ -1,0 +1,7 @@
+node_modules/
+
+# testing for react
+/coverage
+
+# production for react
+/build
