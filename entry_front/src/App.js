@@ -42,7 +42,7 @@ function App() {
           <Switch>
             <PublicRoute path="/login" component={Login} />
             <PublicRoute path="/forgot" component={Forgot}/>
-            <PrivateRoute path="/dashboard" component={Dashboard} />
+            {/* <PrivateRoute path="/dashboard" component={Dashboard} /> */}
           </Switch>
         </div>
       </BrowserRouter>
