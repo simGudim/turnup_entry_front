@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 
 import Login from "./components_login/Login";
 import { Forgot } from "./components_login/Forgot";
+import Registration from "./components_registration/Registration";
 import PublicRoute from "./utils/PublicRoute";
 import PrivateRoute from "./utils/PrivateRoute";
 import { getToken, removeUserSession, setUserSession } from "./utils/Common";
@@ -37,9 +38,11 @@ function App() {
       <BrowserRouter >
         <div className = "header">
           <NavLink activeClassName="active" to="/login">Login</NavLink>
+          <NavLink activeClassName="active" to="/register">Register</NavLink>
         </div>
         <div className = "content">
           <Switch>
+            <PublicRoute path="/register" component={Registration} />
             <PublicRoute path="/login" component={Login} />
             <PublicRoute path="/forgot" component={Forgot}/>
             {/* <PrivateRoute path="/dashboard" component={Dashboard} /> */}
